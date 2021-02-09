@@ -15,17 +15,17 @@ public class LottoRanking {
 	}
 	
 	public String getRanking() {
-		Map<Integer, Supplier<String>> ranking = new HashMap<>();
+		Map<Integer, String> ranking = new HashMap<>();
 		
-		ranking.put(0, () -> "꽝!");
-		ranking.put(1, () -> "꽝!");
-		ranking.put(2, () -> "꽝!");
-		ranking.put(3, () -> "4등!");
-		ranking.put(4, () -> "3등!");
-		ranking.put(5, () -> "2등!");
-		ranking.put(6, () -> "1등!");
+		ranking.put(0, "꽝!");
+		ranking.put(1, "꽝!");
+		ranking.put(2, "꽝!");
+		ranking.put(3, "4등!");
+		ranking.put(4, "3등!");
+		ranking.put(5, "2등!");
+		ranking.put(6, "1등!");
 		
-		return ranking.get(getCount()).get();
+		return ranking.get(getCount());
 	}
 	
 	private int getCount() {
